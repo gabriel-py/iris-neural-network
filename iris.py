@@ -7,7 +7,7 @@ from neural_network import NeuralNetwork
 
 class IrisClassifier(NeuralNetwork):
     def __init__(self, **kwargs):
-        super().__init__(input_size=4, hidden_size=2, output_size=3, **kwargs)
+        super().__init__(**kwargs)
 
     def load_data(self):
         iris = load_iris()
@@ -38,5 +38,5 @@ class IrisClassifier(NeuralNetwork):
 
 
 if __name__ == "__main__":
-    iris_model = IrisClassifier(epochs=3000, learning_rate=0.1)
+    iris_model = IrisClassifier(epochs=3000, learning_rate=0.1, input_size=4, hidden_size=2, output_size=3)
     iris_model.run_hold_out()
