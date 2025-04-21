@@ -7,7 +7,7 @@ from neural_network import NeuralNetwork
 
 class IrisClassifier(NeuralNetwork):
     def __init__(self, **kwargs):
-        super().__init__(input_size=4, hidden_size=6, output_size=3, **kwargs)
+        super().__init__(input_size=4, hidden_size=2, output_size=3, **kwargs)
 
     def load_data(self):
         iris = load_iris()
