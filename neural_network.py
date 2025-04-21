@@ -3,11 +3,7 @@ from sklearn.model_selection import KFold
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.metrics import accuracy_score
 
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
-
-def sigmoid_deriv(x):
-    return x * (1 - x)
+from activations import sigmoid, sigmoid_deriv
 
 class NeuralNetwork:
     def __init__(self, input_size, hidden_size, output_size, learning_rate=0.1, epochs=3000, seed=42, k_folds=5):
